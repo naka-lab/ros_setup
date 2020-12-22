@@ -22,13 +22,13 @@
   Acquire::http::proxy "http://proxy.uec.ac.jp:8080/";
   Acquire::https::proxy "http://proxy.uec.ac.jp:8080/";
   ```
-  
+  - 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
 - pythonインストール
   ```
   chmod +x Anaconda3-2020.11-Linux-x86_64.sh
   ./Anaconda3-2020.11-Linux-x86_64.sh
   ```
-	- インストール後bashを立ち上げ直す
+  - インストール後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
   
 - rosインストール
   ```
