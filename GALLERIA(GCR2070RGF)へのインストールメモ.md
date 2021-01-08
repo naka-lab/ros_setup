@@ -12,15 +12,19 @@
 
 ## 各種ソフトのインストール
 - apt-get proxy設定
-	- bashrcに以下を追加（`gedit ~/.bashrc`）
+  - bashrcに以下を追加（`gedit ~/.bashrc`）
   ```
   export http_proxy="http://proxy.uec.ac.jp:80880/"
   export https_proxy="http://proxy.uec.ac.jp:8080/"
   ```
-	- /etc/apt/apt.confに以下を追加（`sudo gedit /etc/apt/apt.conf`）
+  - /etc/apt/apt.confに以下を追加（`sudo gedit /etc/apt/apt.conf`）
   ```
   Acquire::http::proxy "http://proxy.uec.ac.jp:8080/";
   Acquire::https::proxy "http://proxy.uec.ac.jp:8080/";
+  ```
+  - gitのproxy設定
+  ```
+  git config --global http.proxy http://proxy.uec.ac.jp:8080
   ```
   - 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
 - pythonインストール
