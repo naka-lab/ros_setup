@@ -11,7 +11,7 @@
 	- 解像度が低くてウィンドウ全体が見れない場合は，ウィンドウをWindowsキーを押しながらドラッグすることで動かせます
 
 ## 各種ソフトのインストール
-- apt-get proxy設定
+- proxy設定
   - bashrcに以下を追加（`gedit ~/.bashrc`）
   ```
   export http_proxy="http://proxy.uec.ac.jp:80880/"
