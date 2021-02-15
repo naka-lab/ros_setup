@@ -21,7 +21,7 @@
 - proxy設定
   - bashrcに以下を追加（`gedit ~/.bashrc`）
   ```
-  export http_proxy="http://proxy.uec.ac.jp:80880/"
+  export http_proxy="http://proxy.uec.ac.jp:8080/"
   export https_proxy="http://proxy.uec.ac.jp:8080/"
   ```
   - /etc/apt/apt.confに以下を追加（`sudo gedit /etc/apt/apt.conf`）
