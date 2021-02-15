@@ -2,20 +2,20 @@
 以下のインストールで必要なファイルはネットワークドライブにまとめてます．
 
 ## Ubuntuのインストール
-- セキュアブートを有効にする
-  - 無効になっていると途中でフリーズします
-  - セキュアブートが有効かどうかは，`mokutil --sb-state`で確認
-  - 無効になっていた場合は`sudo mokutil --enable-validation`で有効化（Ubuntuインストール後でもセーフモードから無効化することでフリーズを回避できます．）
-  - もしこれでもフリーズするようなら，デフォルトのグラフィックドライバを無効化
-    - recovery modeで`nano /etc/modprobe.d/blacklist-nouveau.conf`でファイルを作成
-    - 以下をファイルに記述
-    ```
-    blacklist nouveau
-    options nouveau modeset=0
-    ```
-    - `sudo update-initramfs -u`を実行
 - Ubuntuのインストール時には「Ubuntu (safe graphich)」を選択
 	- 解像度が低くてウィンドウ全体が見れない場合は，ウィンドウをWindowsキーを押しながらドラッグすることで動かせます
+- フリーズするようなら，デフォルトのグラフィックドライバを無効化
+  - recovery modeで`nano /etc/modprobe.d/blacklist-nouveau.conf`でファイルを作成
+  - 以下をファイルに記述
+  ```
+  blacklist nouveau
+  options nouveau modeset=0
+  ```
+  - `sudo update-initramfs -u`を実行
+- これでもフリーズするようなら，セキュアブートを有効にする
+  - 無効になっていると途中でフリーズする（？）
+  - セキュアブートが有効かどうかは，`mokutil --sb-state`で確認
+  - 無効になっていた場合は`sudo mokutil --enable-validation`で有効化（Ubuntuインストール後でもセーフモードから無効化することでフリーズを回避できます．）
 
 ## 各種ソフトのインストール
 - proxy設定
@@ -29,11 +29,17 @@
   Acquire::http::proxy "http://proxy.uec.ac.jp:8080/";
   Acquire::https::proxy "http://proxy.uec.ac.jp:8080/";
   ```
+- 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
+
+- gitのインストール
+  - gitのインストール
+  ```
+  sudo apt-get install git
+  ```
   - gitのproxy設定
   ```
   git config --global http.proxy http://proxy.uec.ac.jp:8080
   ```
-  - 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
 - pythonインストール
   ```
   chmod +x Anaconda3-2020.11-Linux-x86_64.sh
