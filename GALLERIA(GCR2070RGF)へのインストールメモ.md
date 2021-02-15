@@ -5,8 +5,15 @@
 - セキュアブートを有効にする
   - 無効になっていると途中でフリーズします
   - セキュアブートが有効かどうかは，`mokutil --sb-state`で確認
-  - 有効になっていた場合は`sudo mokutil --enable-validation`で無効化
-  （Ubuntuインストール後でもセーフモードから無効化することでフリーズを回避できます．）
+  - 無効になっていた場合は`sudo mokutil --enable-validation`で無効化（Ubuntuインストール後でもセーフモードから無効化することでフリーズを回避できます．）
+  - もしこれでもフリーズするようなら，デフォルトのグラフィックドライバを無効化
+    - recovery modeで`nano /etc/modprobe.d/blacklist-nouveau.conf`でファイルを作成
+    - 以下をファイルに記述
+    ```
+    blacklist nouveau
+    options nouveau modeset=0
+    ```
+    - `sudo update-initramfs -u`を実行
 - Ubuntuのインストール時には「Ubuntu (safe graphich)」を選択
 	- 解像度が低くてウィンドウ全体が見れない場合は，ウィンドウをWindowsキーを押しながらドラッグすることで動かせます
 
