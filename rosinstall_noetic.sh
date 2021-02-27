@@ -11,7 +11,7 @@ pip install empy catkin_pkg rospkg
 
 # catkin_ws作成
 sudo echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-source ~/.bashrc
+source /opt/ros/noetic/setup.bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
@@ -20,8 +20,8 @@ catkin_make
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 
 # IP設定用の独自設定
-echo export "ROS_MASTER_URI=http://127.0.0.1:11311" > ~/catkin_ws/set_ip.sh
-echo export "ROS_HOSTNAME=127.0.0.1" >> ~/catkin_ws/set_ip.sh
+echo "export ROS_MASTER_URI=http://127.0.0.1:11311" > ~/catkin_ws/set_ip.sh
+echo "export ROS_HOSTNAME=127.0.0.1" >> ~/catkin_ws/set_ip.sh
 echo "# ROSのIPは以下のファイルで切り替える" >>  ~/.bashrc
 echo "source ~/catkin_ws/set_ip.sh" >> ~/.bashrc
 
