@@ -82,3 +82,8 @@
 - Visual Studio Codeインストール
 	- https://code.visualstudio.com/Download
 	- ダウンロードしてダブルクリックでインストール
+
+- 時刻合わせ（時刻がづれているとROSで通信できない）
+  ```
+  sudo date --set @"$(wget -q https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)"
+  ```
