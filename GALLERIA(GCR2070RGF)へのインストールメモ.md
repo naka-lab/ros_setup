@@ -87,3 +87,7 @@
   ```
   sudo date --set @"$(wget -q --no-check-certificate https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)"
   ```
+  もしこのコマンドが動作しない（NICTのサーバーが動作してない）ようであれば，代わりに以下のコマンドを実行
+  ```
+  sudo date -s "$(wget -q https://github.com/naka-tomo/set_time/raw/main/set_datetime.py -O - | python)"
+  ```
