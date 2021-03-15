@@ -89,5 +89,5 @@
   ```
   もしこのコマンドが動作しない（NICTのサーバーが動作してない）ようであれば，代わりに以下のコマンドを実行
   ```
-  sudo date -s "$(wget -q https://github.com/naka-tomo/set_time/raw/main/set_datetime.py -O - | python)"
+  sudo date -s "$( wget -q http://worldtimeapi.org/api/timezone/Asia/Tokyo -O - | grep -oE \"datetime\":\"[^\"]* | sed s/\"datetime\":\"// )"
   ```
