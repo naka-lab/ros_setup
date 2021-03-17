@@ -46,6 +46,11 @@
   ./Anaconda3-2020.11-Linux-x86_64.sh
   ```
   - インストール後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
+  - proxy環境下でcondaコマンドを使えるようにする
+  ```
+  conda config --set proxy_servers.http http://proxy.uec.ac.jp:8080
+  conda config --set proxy_servers.https http://proxy.uec.ac.jp:8080
+  ```
   
 - rosインストール
   ```
