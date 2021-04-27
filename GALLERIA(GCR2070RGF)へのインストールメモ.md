@@ -31,6 +31,26 @@
   ```
 - 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
 
+- apt update
+  ```
+  sudo apt-get update
+  sudo apt-get -y upgrade
+  ```
+- ディレクトリを英語表記
+  ```
+  LANG=C xdg-usesr-dirs-gtk-update
+  ```
+- Terminal の言語を英語に変更
+　- bashrcに以下を追加（`gedit ~/.bashrc`）
+  ```
+  export LANG=en_US
+  ```
+  - 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
+  
+- Windowが最大化される機能を無効化
+  ```
+  gsettings set org.gnome.mutter auto-maximize false
+  ```
 - gitのインストール
   - gitのインストール
   ```
