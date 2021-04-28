@@ -99,7 +99,7 @@
   ```
   cd
   wget https://github.com/naka-lab/ros_setup/raw/main/set_time.sh
-  chamod +x set_time.sh
+  chmod +x set_time.sh
   ```
   - 時刻合わせの実行
   ```
