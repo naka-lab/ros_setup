@@ -94,11 +94,18 @@
 	- https://code.visualstudio.com/Download
 	- ダウンロードしてダブルクリックでインストール
 
-- 時刻合わせ（時刻がづれているとROSで通信できない）
+- proxy環境下での時刻合わせ（時刻がづれているとROSで通信できない）
+  - 時刻合わせスクリプトのダウンロード
   ```
-  sudo date --set @"$(wget -q --no-check-certificate https://ntp-a1.nict.go.jp/cgi-bin/jst -O - | sed -n 4p | cut -d. -f1)"
+  cd
+  wget https://github.com/naka-lab/ros_setup/raw/main/set_time.sh
+  chamod +x set_time.sh
   ```
-  もしこのコマンドが動作しない（NICTのサーバーが動作してない）ようであれば，代わりに以下のコマンドを実行
+  - 時刻合わせの実行
   ```
-  sudo date -s "$( wget -q http://worldtimeapi.org/api/timezone/Asia/Tokyo -O - | grep -oE \"datetime\":\"[^\"]* | sed s/\"datetime\":\"// )"
+  ~/set_time.sh
+  date
   ```
+  表示される時間がずれているようであれば再度上記コマンドを実行する．（サーバーエラー等で失敗するときが時々あるため）
+  
+
