@@ -109,7 +109,11 @@
   ```
   sudo systemctl start ssh
   ```
-
+  - 鍵を生成して、Serverにコピー
+  ```
+  ssh-keygen
+  cat ~/.ssh/id_rsa.pub | ssh user@ip_address "mkdir -p ~/.ssh && touch ~/.ssh/authorized_keys && chmod -R go= ~/.ssh && cat >> ~/.ssh/authorized_keys"
+  ```
 - Visual Studio Codeインストール
 	- https://code.visualstudio.com/Download
 	- ダウンロードしてダブルクリックでインストール
