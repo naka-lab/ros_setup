@@ -109,6 +109,7 @@
   
 - 画面共有（VNC）の有効化
   - vinoをインストール：`sudo apt-get install vino`
+  - [設定]→[共有]→[画面共有]　で外面共有を有効化
   - Anaconda環境が入ってる場合は，base環境を抜ける: `conda deactivate`
   - 暗号化を解除する：`gsettings set org.gnome.Vino require-encryption false`
 
