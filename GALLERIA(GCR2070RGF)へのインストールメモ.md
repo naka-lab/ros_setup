@@ -107,4 +107,8 @@
   ```
   表示される時間がずれているようであれば再度上記コマンドを実行する．（サーバーエラー等で失敗するときが時々あるため）
   
+- 画面共有（VNC）の有効化
+  - vinoをインストール：`sudo apt-get install vino`
+  - Anaconda環境が入ってる場合は，base環境を抜ける: `conda deactivate`
+  - 暗号化を解除する：`gsettings set org.gnome.Vino require-encryption false`
 
