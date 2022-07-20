@@ -79,6 +79,10 @@
   ```
   conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
   ```
+  エラーになる場合はpipを使う
+  ```
+  pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
+  ```
   
 - その他アプリインストール
   ```
