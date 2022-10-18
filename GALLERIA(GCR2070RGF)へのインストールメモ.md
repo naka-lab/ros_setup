@@ -76,7 +76,7 @@
   - その他のインストール方法
     - 左下の`アプリケーションを表示する`にある`ソフトウェアとアップデート`の`追加のドライバー`で最新のnvidia-driverをインストールして再起動 
   - 再起動して画面が真っ黒のままになる場合
-    - 起動時にESCを押しリカバリモードに入り，`Advanced options for Ubuntu`→`resume`を選択するとなぜか起動できる．（Galleri XL7C-R36Hの場合）
+    - 起動時にESCを押しリカバリモードに入り，`Advanced options for Ubuntu`→`Ubuntu *** (revovery mode)`→`resume`を選択するとなぜか起動できる．（Galleria XL7C-R36Hの場合）
 - pytorchインストール
   ```
   conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
