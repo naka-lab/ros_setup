@@ -16,6 +16,12 @@
   - 無効になっていると途中でフリーズする（？）
   - セキュアブートが有効かどうかは，`mokutil --sb-state`で確認
   - 無効になっていた場合は`sudo mokutil --enable-validation`で有効化（Ubuntuインストール後でもセーフモードから無効化することでフリーズを回避できます．）
+- フリーズせずに再起動する方法
+  - 起動時にESC連打でリカバリモードに入り，Advanced options for Ubuntu→Ubuntu *** (revovery mode)→resumeを選択すると起動できる．
+  - ESC連打でgrubのプロンプトまで行ってしまった場合，normalを入力しEnter後，すぐにESCを押すと戻れる．
+- 起動時のフリーズを回避する方法
+  - `sudo nano /etc/default/grub`でGRUBの設定ファイル中の`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`を`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash nomodeset"`に変更
+  - その後`sudo update-grub`を実行し再起動するとフリーズしなくなるはず
 - WIFI，タッチパッドが使えない場合
   - 左下の`アプリケーションを表示する`にある`ソフトウェアの更新`で更新すると使えるようになる（XL7C-R36Hの場合）
 ## 各種ソフトのインストール
