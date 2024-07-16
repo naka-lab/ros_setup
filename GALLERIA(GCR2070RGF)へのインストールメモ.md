@@ -30,10 +30,6 @@
   ```
   sudo apt-get install git
   ```
-  - gitのproxy設定
-  ```
-  git config --global http.proxy http://proxy.uec.ac.jp:8080
-  ```
 - pythonインストール
   ```
   wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
