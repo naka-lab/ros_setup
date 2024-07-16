@@ -6,7 +6,6 @@ wget https://github.com/naka-lab/ros_setup/raw/main/rosinstall_noetic.sh
 chmod +x rosinstall_noetic.sh 
 ./rosinstall_noetic.sh
 ```
-`rosinstall_noetic.sh`には電気通信大学のプロキシが設定されています．自宅などで実効する場合は，一行目の`--keyserver-option http-proxy=http://proxy.uec.ac.jp:8080`を削除してください．
 
 ### IPの設定
 `rosinstall_noetic.sh`でインストールすると，`catkin_ws`の中に以下のような`set_ip.sh`が作成されます．
