@@ -25,19 +25,6 @@
 - WIFI，タッチパッドが使えない場合
   - 左下の`アプリケーションを表示する`にある`ソフトウェアの更新`で更新すると使えるようになる（XL7C-R36Hの場合）
 ## 各種ソフトのインストール
-- proxy設定
-  - bashrcに以下を追加（`gedit ~/.bashrc`）
-  ```
-  export http_proxy="http://proxy.uec.ac.jp:8080/"
-  export https_proxy="http://proxy.uec.ac.jp:8080/"
-  ```
-  - /etc/apt/apt.confに以下を追加（`sudo gedit /etc/apt/apt.conf`）
-  ```
-  Acquire::http::proxy "http://proxy.uec.ac.jp:8080/";
-  Acquire::https::proxy "http://proxy.uec.ac.jp:8080/";
-  ```
-- 設定後にターミナルを立ち上げ直す（または，`source ~/.bashrc`を実行）
-
 - gitのインストール
   - gitのインストール
   ```
@@ -108,19 +95,6 @@
 - Visual Studio Codeインストール
 	- https://code.visualstudio.com/Download
 	- ダウンロードしてダブルクリックでインストール
-
-- proxy環境下での時刻合わせ（時刻がづれているとROSで通信できない）
-  - 時刻合わせスクリプトのダウンロード
-  ```
-  cd
-  wget https://github.com/naka-lab/ros_setup/raw/main/set_time.sh
-  chmod +x set_time.sh
-  ```
-  - 時刻合わせの実行
-  ```
-  sudo -E ~/set_time.sh
-  ```
-  表示される時間がずれているようであれば再度上記コマンドを実行する．（サーバーエラー等で失敗するときが時々あるため）
   
 - 画面共有（VNC）の有効化
   - vinoをインストール：`sudo apt-get install vino`
